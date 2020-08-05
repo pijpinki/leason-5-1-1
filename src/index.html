@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <div id="app">
+      <button @click="Auth">Login on google</button>
+    </div>
+    <script>
+      const app = new Vue({
+        el: "#app",
+
+        methods: {
+          Auth() {
+            const params = new URLSearchParams({
+              client_id:
+                "494489327191-u5ei58jvqaolcigonbumra231fgujbrk.apps.googleusercontent.com",
+              redirect_uri: "https://w4d7s.sse.codesandbox.io/users/google"
+            });
+            const url = "https://accounts.google.com/o/oauth2/v2/auth";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
